@@ -1,7 +1,11 @@
 import { useAuthData } from '@deriv-com/api-hooks'
 import { Button } from '@deriv-com/ui'
 import { URLUtils } from '@deriv-com/utils'
-import { SubBrandDerivPartnersBrandLightIcon } from '@deriv/quill-icons'
+import {
+    SubBrandDerivPartnersBrandLightIcon,
+    LegacyLogout1pxIcon,
+    IllustrativeSupport247Icon,
+} from '@deriv/quill-icons'
 
 export const Header = () => {
     const { isAuthorized, activeLoginid, logout } = useAuthData()
@@ -44,14 +48,14 @@ export const Header = () => {
                         </Button>
                     </div>
                 ) : (
-                    <Button
-                        size="sm"
-                        variant="outlined"
-                        color="black"
-                        onClick={logout}
-                    >
-                        Logout
-                    </Button>
+                    <div className="flex gap-30">
+                        <div className="flex cursor-pointer">
+                            <IllustrativeSupport247Icon width={25} />
+                        </div>
+                        <div className="flex cursor-pointer" onClick={logout}>
+                            <LegacyLogout1pxIcon width={22} />
+                        </div>
+                    </div>
                 )}
             </div>
         </header>
