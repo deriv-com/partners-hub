@@ -1,9 +1,9 @@
-import { AppContainer, PartnersAcademy } from '@/components'
+import { AppContainer, CommissionBanner, PartnersAcademy } from '@/components'
 import { Button, Text } from '@deriv-com/ui'
 
 export const Homepage = () => {
     return (
-        <AppContainer className="gap-16 flex flex-col lg:max-w-[1000px] pt-24">
+        <AppContainer className="gap-24 flex flex-col lg:max-w-[1000px] pt-24">
             <Text
                 as="h1"
                 align="left"
@@ -25,6 +25,7 @@ export const Homepage = () => {
                 </Text>
                 <Button className="rounded-[100px]">Open Dashboard</Button>
             </div>
+            <CommissionBanner />
             <PartnersAcademy />
         </AppContainer>
     )
