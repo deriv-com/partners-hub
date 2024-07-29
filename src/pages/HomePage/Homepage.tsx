@@ -2,6 +2,10 @@ import { AppContainer, CommissionBanner, PartnersAcademy } from '@/components'
 import { Button, Text } from '@deriv-com/ui'
 
 export const Homepage = () => {
+    const handleClick = () => {
+        window.open('https://login.deriv.com/signin.php?lang=0', '_blank')
+    }
+
     return (
         <AppContainer className="gap-24 flex flex-col lg:max-w-[1000px] pt-24">
             <Text
@@ -23,7 +27,9 @@ export const Homepage = () => {
                 >
                     My referral links and reports
                 </Text>
-                <Button className="rounded-[100px]">Open Dashboard</Button>
+                <Button className="rounded-[100px]" onClick={handleClick}>
+                    Open Dashboard
+                </Button>
             </div>
             <CommissionBanner />
             <PartnersAcademy />
