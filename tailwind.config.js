@@ -1,9 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+    content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         extend: {
             backfaceVisibility: {
@@ -64,6 +61,10 @@ export default {
             },
             colors: {
                 brand: {
+                    secondary: {
+                        base: '#414652',
+                    },
+                    neutral: '#E9ECEF',
                     blue: '#85acb0',
                     brown: {
                         dark: '#664407',
@@ -544,5 +545,5 @@ export default {
             },
         },
     },
-  plugins: [],
+    plugins: [],
 }

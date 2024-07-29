@@ -15,13 +15,11 @@ const queryClient = new QueryClient()
 const container = document.getElementById('root')
 const root = container ? ReactDOM.createRoot(container) : null
 
-const signupRoute = window.location.pathname === '/signup'
-
 root?.render(
     <React.StrictMode>
         <QueryClientProvider client={queryClient}>
             <AppDataProvider>
-                {!signupRoute && <Header />}
+                <Header />
                 <App />
             </AppDataProvider>
             <ReactQueryDevtools initialIsOpen={false} />
