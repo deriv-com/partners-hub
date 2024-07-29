@@ -63,6 +63,7 @@ export default {
                 brand: {
                     secondary: {
                         base: '#414652',
+                        neutral: '#DEE2E6',
                     },
                     neutral: '#E9ECEF',
                     blue: '#85acb0',
