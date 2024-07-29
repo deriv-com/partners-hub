@@ -11,14 +11,21 @@ export const CommissionBanner = () => {
                     <Text weight="bold" size="lg" align="left">
                         How commissions are calculated
                     </Text>
-                    <Button
-                        className="mt-4 border-brand-secondary-base border-solid border-2 rounded-[100px]"
-                        variant="outlined"
-                        color="black"
+                    <a
+                        target="_blank"
+                        href="https://deriv.com/help-centre/affiliate-programme#id-commission-plans"
+                        rel="noopener noreferrer"
                     >
-                        Learn more
-                    </Button>
+                        <Button
+                            className="mt-4 border-brand-secondary-base border-solid border-2 rounded-[100px]"
+                            variant="outlined"
+                            color="black"
+                        >
+                            Learn more
+                        </Button>
+                    </a>
                 </div>
+
                 <CurrencyIcon className="relative z-10" />
             </div>
         </div>
