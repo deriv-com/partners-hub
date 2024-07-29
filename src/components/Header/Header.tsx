@@ -1,8 +1,8 @@
 import { useAuthData } from '@deriv-com/api-hooks'
 import { Button } from '@deriv-com/ui'
 import { URLUtils } from '@deriv-com/utils'
+import DerivPartners from '@/assets/deriv-partners.svg?react'
 import {
-    SubBrandDerivPartnersBrandLightIcon,
     LegacyLogout1pxIcon,
     IllustrativeSupport247Icon,
 } from '@deriv/quill-icons'
@@ -11,18 +11,20 @@ export const Header = () => {
     const { isAuthorized, activeLoginid, logout } = useAuthData()
     const { getOauthURL, getDerivStaticURL } = URLUtils
 
+    const handleClick = () => {
+        window.open('https://deriv.com/partners/affiliate-ib', '_blank')
+    }
+
     return (
-        <header className="border-solid border-b-1 border-b-system-light-hover-background flex px-20 sticky top-0 bg-system-light-primary-background z-50 py-10">
+        <header className="border-solid border-b-1 border-b-system-light-hover-background flex px-40 sticky top-0 bg-system-light-primary-background z-50 py-10">
             <div className="flex justify-between items-center w-full">
                 <a
-                    onClick={() => {
-                        window.location.href = getDerivStaticURL('')
-                    }}
+                    onClick={handleClick}
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <div>
-                        <SubBrandDerivPartnersBrandLightIcon />
+                    <div className="cursor-pointer">
+                        <DerivPartners />
                     </div>
                 </a>
                 {!(isAuthorized || activeLoginid) ? (
