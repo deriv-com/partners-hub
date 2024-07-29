@@ -1,4 +1,9 @@
-import { AppContainer, CommissionBanner, PartnersAcademy } from '@/components'
+import {
+    AppContainer,
+    CommissionBanner,
+    PartnersAcademy,
+    VideoLibrary,
+} from '@/components'
 import { Button, Text } from '@deriv-com/ui'
 
 export const Homepage = () => {
@@ -7,7 +12,7 @@ export const Homepage = () => {
     }
 
     return (
-        <AppContainer className="gap-24 flex flex-col lg:max-w-[1000px] pt-24">
+        <AppContainer className="gap-24 flex flex-col lg:max-w-[1000px] py-24 lg:px-0 px-16">
             <Text
                 as="h1"
                 align="left"
@@ -17,7 +22,7 @@ export const Homepage = () => {
             >
                 Partner's Hub
             </Text>
-            <div className="flex justify-between ">
+            <div className="flex justify-between items-start lg:flex-row flex-col gap-8 ">
                 <Text
                     as="p"
                     align="left"
@@ -27,12 +32,16 @@ export const Homepage = () => {
                 >
                     My referral links and reports
                 </Text>
-                <Button className="rounded-[100px]" onClick={handleClick}>
+                <Button
+                    className="rounded-[100px] w-full lg:w-auto"
+                    onClick={handleClick}
+                >
                     Open Dashboard
                 </Button>
             </div>
             <CommissionBanner />
             <PartnersAcademy />
+            <VideoLibrary />
         </AppContainer>
     )
 }

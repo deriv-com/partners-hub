@@ -29,8 +29,8 @@ export const MarketingBubbles = () => {
     ]
 
     return (
-        <div className="flex flex-col gap-4 justify-between">
-            <div className="flex flex-wrap gap-4">
+        <div className="flex flex-col gap-16 justify-between">
+            <div className="flex flex-wrap gap-8">
                 {tags.map((tag) => (
                     <Tag
                         key={tag.text}
