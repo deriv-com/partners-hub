@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { Text } from '@deriv-com/ui'
+import { Button, Text } from '@deriv-com/ui'
 import useEmblaCarousel from 'embla-carousel-react'
 import Affiliate from '@/assets/affiliatecost.jpg'
 import HowToSecure from '@/assets/howtosecure.png'
@@ -7,6 +7,7 @@ import howtocheckreferral from '@/assets/howtocheckreferral.png'
 import derivmasteraffiliate from '@/assets/derivmasteraffiliate.jpg'
 import howthederivmaster from '@/assets/howthederivmaster.jpg'
 import howtogetreferral from '@/assets/howtogetreferral.jpg'
+import videoIcon from '@/assets/videoicon.png'
 
 import {
     LabelPairedChevronLeftCaptionRegularIcon,
@@ -98,6 +99,23 @@ export const VideoLibrary: React.FC = () => {
                         height={25}
                     />
                 </button>
+            </div>
+            <div className="flex justify-center">
+                <Button
+                    onClick={() =>
+                        window.open(
+                            'https://www.youtube.com/c/Deriv/videos',
+                            '_blank'
+                        )
+                    }
+                    variant="outlined"
+                    className="rounded-[100px] lg:w-auto w-full"
+                >
+                    <div className="flex items-center gap-12 justify-center">
+                        <img src={videoIcon} />
+                        See all videos
+                    </div>
+                </Button>
             </div>
         </div>
     )
